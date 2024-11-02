@@ -11,6 +11,13 @@
   --box-shadow: inset 0 0 20px 5px rgba(255, 255, 255, 0.4), 2px 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.class-box {
+  background-color: #594d49;
+  border: 5px solid #645f57;
+  box-shadow: inset 0 0 20px 5px rgba(255, 255, 255, 0.4), 2px 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
 .html {
   background-color: #e1edf8;
   padding: 20px;
@@ -20,16 +27,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .logo {
   position: sticky;
   width: 30%;
   height: 70px;
-  background-color: var(--brown-color);
-  border: 5px solid var(--brown-color-border);
-  border-radius: 5px;
-  box-shadow: var(--box-shadow);
 }
 
 .logo-img {
@@ -42,14 +46,51 @@
   justify-content: center;
   align-items: center;
   list-style: none;
-  background-color: var(--brown-color);
-  border: 5px solid var(--brown-color-border);
-  box-shadow: var(--box-shadow);
-  border-radius: 5px;
   height: 70px;
 }
 
 .nav-item {
-  padding: 10px 45px;
-  font-size: 30px;
+  padding: 10px 2.7vw;
+  font-size: 2.2vw;
+  font-family: "REM", sans-serif;
+  font-weight: 500;
+  color: #d0edf5;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #193f50;
+  padding: 20px 0;
+}
+
+.info-img {
+  width: 40%;
+}
+
+.description {
+  font-family: "Wellfleet", serif;
+  padding: 20px;
+  text-align: start;
+}
+
+.description :first-child {
+  font-size: 5vw;
+}
+
+.description p {
+  font-size: 1.5vw;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box-img {
+  width: 40%;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.img {
+  width: 70%;
+  filter: drop-shadow(10px 10px 0px rgba(0, 0, 0, 0.25));
 }
