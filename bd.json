@@ -1,29 +1,29 @@
 [
   {
     "name": "Valorant API",
-    "img": "/Valorant 1.png",
-    "description": "",
+    "img": "/valorant.png",
+    "description": "Esta es una aplicación SPA desarrollada en React utilizando Vite. La app emplea React Router para la navegación sin recargas y Context API para manejar el estado global. Mediante llamadas a una API de Valorant, muestra información relevante de cada personaje, lo que permite una experiencia dinámica y en tiempo real.",
     "github": "https://github.com/Enzoriel/valorant-api",
     "deploy": "https://valorant-api-pearl.vercel.app/"
   },
   {
     "name": "Adivina el Pokémon",
-    "img": "/Valorant 1.png",
-    "description": "",
+    "img": "/adivinar-pokemon.png",
+    "description": "Juego web en el que los usuarios adivinan el Pokémon según su silueta. La aplicación aprovecha hooks de React para una gestión óptima de datos y rendimiento, como el manejo dinámico del estado, gestión de efectos secundarios,  manejo de referencias y DOM sin causar renderizados innecesarios y asegurarse de que las funciones se reutilicen correctamente. Se utiliza un archivo API con un método random que devuelve un Pokemon aleatorio para nuestra aplicación. Emplea una librería de CSS personalizada para los estilos.",
     "github": "https://github.com/Enzoriel/adivinar-pokemon",
     "deploy": "https://adivinar-pokemon-seven.vercel.app/"
   },
   {
     "name": "Organización",
-    "img": "/Valorant 1.png",
-    "description": "",
+    "img": "/org.png",
+    "description": "Este proyecto es una aplicación React que permite la gestión y visualización de colaboradores en distintos equipos. Utiliza useState para el manejo dinámico de formularios y listas, permitiendo agregar, eliminar, y modificar datos de colaboradores y equipos en tiempo real. La app también emplea uuid para generar identificadores únicos y componentes personalizados para cada sección. Además, la app incluye lógica para cambiar colores y marcar favoritos, generando un diseño de interfaz interactiva.",
     "github": "https://github.com/Enzoriel/org",
     "deploy": "https://react-org-nu.vercel.app/"
   },
   {
     "name": "Fokus",
-    "img": "/Valorant 1.png",
-    "description": "",
+    "img": "/fokus.png",
+    "description": "Esta es una app de temporizador de productividad para practicar el uso de JavaScript en la gestión de eventos y estados. La interfaz adapta dinámicamente su contexto (enfoque o descanso) y utiliza efectos de sonido para mejorar la experiencia. Implementé cambios de estado visuales y auditivos para que el temporizador sea interactivo y fácil de usar.",
     "github": "https://github.com/Enzoriel/FokusCurso-proyecto-inicial",
     "deploy": "https://enzoriel.github.io/FokusCurso-proyecto-inicial/"
   }
