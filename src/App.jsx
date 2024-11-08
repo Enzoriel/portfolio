@@ -1,4 +1,22 @@
 import "./App.css";
+import proyectos from "/bd.json";
+
+const Proyects = () => {
+  const bd = proyectos;
+
+  return (
+    <div className="proyect-list">
+      {bd.map((element) => (
+        <div className="proyect-item" key={element.name}>
+          <h3>{element.name}</h3>
+          <img src={element.img} />
+          <p>{element.description}</p>
+          <p>{element.github + element.deploy}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 function App() {
   return (
@@ -6,7 +24,7 @@ function App() {
       <nav className="nav">
         <section className="logo class-box">
           <a>
-            <img className="logo-img" src="../../public/my-logo.svg" />
+            <img className="logo-img" src="/My-logo.svg" />
           </a>
         </section>
 
@@ -27,7 +45,7 @@ function App() {
       </nav>
       <section className="info class-box">
         <div className="box-img">
-          <img className="img" src="../../public/logo-img.png" />
+          <img className="img" src="/logo-img.png" />
         </div>
         <div className="description">
           <p>Hola, soy Enzorieldev.</p>
@@ -40,21 +58,9 @@ function App() {
         </div>
       </section>
       <section className="proyect class-box">
-        <img src="../../public/proyect.svg" className="proyect-img" />
+        <img src="/proyect.svg" className="proyect-img" />
         <div>
-          <div className="proyect-list">
-            <div className="proyect-item">
-              <h3>Valorant API</h3>
-              <img src="../../public/Valorant 1.png" />
-              <p>
-                Count the time your children spend on activities like homework, chores and exercise and convert it into
-                screen time. I created this with Vue.js and the Howlr library to add the interactive clock sounds. It
-                can be installed as a progressive web application. The git repository for this one is private at the
-                moment.
-              </p>
-              <p>Tecnoligias</p>
-            </div>
-          </div>
+          <Proyects />
         </div>
       </section>
       <section className="tecnologies class-box">

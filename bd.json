@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Valorant API",
+    "img": "/Valorant 1.png",
+    "description": "",
+    "github": "https://github.com/Enzoriel/valorant-api",
+    "deploy": "https://valorant-api-pearl.vercel.app/"
+  },
+  {
+    "name": "Adivina el Pokémon",
+    "img": "/Valorant 1.png",
+    "description": "",
+    "github": "https://github.com/Enzoriel/adivinar-pokemon",
+    "deploy": "https://adivinar-pokemon-seven.vercel.app/"
+  },
+  {
+    "name": "Organización",
+    "img": "/Valorant 1.png",
+    "description": "",
+    "github": "https://github.com/Enzoriel/org",
+    "deploy": "https://react-org-nu.vercel.app/"
+  },
+  {
+    "name": "Fokus",
+    "img": "/Valorant 1.png",
+    "description": "",
+    "github": "https://github.com/Enzoriel/FokusCurso-proyecto-inicial",
+    "deploy": "https://enzoriel.github.io/FokusCurso-proyecto-inicial/"
+  }
+]
