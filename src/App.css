@@ -24,6 +24,14 @@
   padding: 20px;
 }
 
+.title {
+  font-size: 6vw;
+  font-family: "Wellfleet", serif;
+  margin: 0;
+  filter: drop-shadow(0 5px 2px rgba(155, 135, 26, 0.5)) drop-shadow(0 -5px 2px rgba(156, 53, 21, 0.5))
+    drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
 /* NAVIGATION */
 .nav {
   display: flex;
@@ -138,14 +146,6 @@
   transform: translateY(-2%);
 }
 
-.title {
-  font-size: 6vw;
-  font-family: "Wellfleet", serif;
-  margin: 0;
-  filter: drop-shadow(0 5px 2px rgba(155, 135, 26, 0.5)) drop-shadow(0 -5px 2px rgba(156, 53, 21, 0.5))
-    drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-}
-
 .proyect-item h3 {
   display: flex;
   justify-content: center;
@@ -198,18 +198,75 @@
 }
 
 .links:hover {
-  fill: #332d1c;
+  fill: #332d1c7e;
   transform: scale(1.1);
 }
 
-/* TECNOLOGIAS */
-.tecnologies-img {
-  width: 50%;
-  margin: 20px;
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-}
+/* TECNOLOGIES */
 
 .tecnologies {
   margin-top: 50px;
-  background-color: var(--blur-color);
+  background-color: rgb(26, 85, 77);
+  padding: 50px 130px;
+}
+
+.tecno-text {
+  margin-bottom: 30px;
+  filter: drop-shadow(0 5px 2px rgba(109, 143, 18, 0.5)) drop-shadow(0 -5px 2px rgba(80, 21, 156, 0.5))
+    drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.tecno-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tecno-list {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 25px;
+  outline-offset: 4px;
+  outline: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 50px 5px rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tecno-list:hover {
+  outline-offset: 0px;
+}
+
+.tecno-img {
+  width: 90px;
+  height: 90px;
+  transition: all 0.3s ease;
+}
+
+.tecno-list:hover .tecno-img {
+  transform: translateY(-15%);
+}
+
+.tecno-description {
+  position: absolute;
+  bottom: -20%;
+  padding: 1px 4px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+.tecno-description p {
+  font-size: 16px;
+  font-family: "Share Tech", sans-serif;
+}
+
+.tecno-list:hover .tecno-description {
+  bottom: 7%;
 }

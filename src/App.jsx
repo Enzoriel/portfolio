@@ -60,6 +60,39 @@ const Proyects = () => {
   );
 };
 
+const Tecnologies = () => {
+  const tecnologiesImg = [
+    "javascript",
+    "html5",
+    "css",
+    "react",
+    "react-router",
+    "styled-components",
+    "figma",
+    "vercel",
+  ];
+
+  return (
+    <div className="tecno-container">
+      {tecnologiesImg.map((element) => (
+        <>
+          <div className="tecno-list" key={element}>
+            <img
+              className="tecno-img"
+              src={`/tecnologies/${element}.svg`}
+              aria-label={element}
+              title={element.toUpperCase()}
+            />
+            <div className="tecno-description">
+              <p>{element.toUpperCase()}</p>
+            </div>
+          </div>
+        </>
+      ))}
+    </div>
+  );
+};
+
 function App() {
   return (
     <div className="html">
@@ -106,9 +139,9 @@ function App() {
         </div>
       </section>
       <section className="tecnologies class-box">
-        <h2 className="title tecno">Tecnologías</h2>
-        <div className="tecno">
-          <img className="tecno-img" src="/tecnologies/javascript.svg" aria-label="JavaScript" />
+        <h2 className="title tecno-text">Tecnologías</h2>
+        <div className="tecno-container" id="tecno">
+          <Tecnologies />
         </div>
       </section>
     </div>
