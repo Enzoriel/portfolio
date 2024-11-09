@@ -100,13 +100,16 @@ function App() {
         </div>
       </section>
       <section className="proyect class-box">
-        <img src="/proyect.svg" className="proyect-img" />
+        <h2 className="title">Proyectos</h2>
         <div>
           <Proyects />
         </div>
       </section>
       <section className="tecnologies class-box">
-        <img src="../../tecnologies.svg" className="tecnologies-img" />
+        <h2 className="title tecno">Tecnologías</h2>
+        <div className="tecno">
+          <img className="tecno-img" src="/tecnologies/javascript.svg" aria-label="JavaScript" />
+        </div>
       </section>
     </div>
   );

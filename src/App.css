@@ -65,7 +65,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--blur-color);
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .info-img {
@@ -102,7 +102,7 @@
 .proyect {
   margin-top: 50px;
   padding: 20px;
-  background-color: #3d5a45;
+  background-color: #524a35;
 }
 
 .proyect-list {
@@ -127,12 +127,23 @@
   box-shadow: inset 0 0 80px 20px #332d1c, 0 0 10px 0 rgba(0, 0, 0, 0.6);
   position: relative;
   color: #372a25;
+  transition: all 0.5s ease;
 }
 
-.proyect-img {
-  width: 30%;
-  margin: 20px;
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+.proyect-list:has(.proyect-item:hover) .proyect-item:not(:hover) {
+  filter: opacity(0.4);
+}
+
+.proyect-item:hover {
+  transform: translateY(-2%);
+}
+
+.title {
+  font-size: 6vw;
+  font-family: "Wellfleet", serif;
+  margin: 0;
+  filter: drop-shadow(0 5px 2px rgba(155, 135, 26, 0.5)) drop-shadow(0 -5px 2px rgba(156, 53, 21, 0.5))
+    drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 .proyect-item h3 {
@@ -182,6 +193,13 @@
 .links {
   color: #332d1c;
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+  transition: all 0.3s ease;
+  fill: transparent;
+}
+
+.links:hover {
+  fill: #332d1c;
+  transform: scale(1.1);
 }
 
 /* TECNOLOGIAS */
