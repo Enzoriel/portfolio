@@ -26,7 +26,7 @@ a {
 
 .html {
   background-color: #e1edf8;
-  padding: 50px 40px;
+  padding: 20px 40px;
 }
 
 .title {
@@ -45,10 +45,50 @@ a {
   align-items: center;
   background-color: var(--blur-color);
   padding: 40px 10px;
+  position: relative;
 }
 
-.info-img {
-  width: 40%;
+.networks-links {
+  position: absolute;
+  width: 100px;
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.networks {
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.555);
+  padding: 10px;
+  transition: transform 0.3s ease;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.networks:hover {
+  animation: girarInfinito 1s infinite ease-in-out;
+}
+
+.networks:active {
+  animation: none;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+@keyframes girarInfinito {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .description {
@@ -75,6 +115,30 @@ a {
 .img {
   width: 70%;
   filter: drop-shadow(10px 10px 0px rgba(0, 0, 0, 0.25));
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.slime-animation {
+  animation: Slime 1s forwards;
+}
+
+@keyframes Slime {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8) scaley(1.2);
+  }
+  50% {
+    transform: scale(1.2) scaley(0.8);
+  }
+  75% {
+    transform: scale(0.9) scaley(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* PROYECTS */
@@ -148,6 +212,8 @@ a {
   border-radius: 10px;
   object-fit: cover;
   filter: grayscale(0.9);
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .proyect-links a {
@@ -222,6 +288,8 @@ a {
   width: 90px;
   height: 90px;
   transition: all 0.3s ease;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .tecno-list:hover .tecno-img {
@@ -253,27 +321,6 @@ a {
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
-
-.networks-links {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.networks-links::before {
-  left: 0%;
-}
-
-.networks-links::after {
-  right: 0%;
-}
-
-.networks {
-  width: 30px;
 }
 
 .credits {
@@ -326,4 +373,6 @@ a {
 
 .logo-img {
   height: 70px;
+  -webkit-user-drag: none;
+  user-select: none;
 }

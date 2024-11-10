@@ -75,22 +75,31 @@ const Tecnologies = () => {
   return (
     <div className="tecno-container">
       {tecnologiesImg.map((element) => (
-        <>
-          <div className="tecno-list" key={element}>
-            <img
-              className="tecno-img"
-              src={`/tecnologies/${element}.svg`}
-              aria-label={element}
-              title={element.toUpperCase()}
-            />
-            <div className="tecno-description">
-              <p>{element.toUpperCase()}</p>
-            </div>
+        <div className="tecno-list" key={element}>
+          <img
+            className="tecno-img"
+            src={`/tecnologies/${element}.svg`}
+            aria-label={element}
+            title={element.toUpperCase()}
+          />
+          <div className="tecno-description">
+            <p>{element.toUpperCase()}</p>
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
+};
+
+const handleClick = (e) => {
+  e.preventDefault();
+  const element = e.currentTarget;
+  element.classList.add("slime-animation");
+  setTimeout(() => {
+    if (element && element.classList) {
+      element.classList.remove("slime-animation");
+    }
+  }, 1000);
 };
 
 function App() {
@@ -98,7 +107,15 @@ function App() {
     <div className="html">
       <section className="info class-box" id="info">
         <div className="box-img">
-          <img className="img" src="/logo-img.png" />
+          <img className="img" src="/logo-img.png" onClick={handleClick} />
+          <div className="networks-links">
+            <a href="https://www.linkedin.com/in/enzorieldev/" target="_blank">
+              <img src="/linkedin.svg" className="networks" aria-label="Linkedin" title="Contactame por Linkedin" />
+            </a>
+            <a href="https://github.com/Enzoriel" target="_blank">
+              <img src="/githubv2.svg" className="networks" aria-label="Github" title="Ve mis repositorios en Github" />
+            </a>
+          </div>
         </div>
         <div className="description">
           <p>Hola, soy Enzorieldev.</p>
@@ -123,20 +140,12 @@ function App() {
         </div>
       </section>
       <footer className="footer">
-        <div className="networks-links">
-          <a href="https://www.linkedin.com/in/enzorieldev/" target="_blank">
-            <img src="/linkedin.svg" className="networks" aria-label="Linkedin" title="Contactame por Linkedin" />
+        <section className="logo">
+          <a>
+            <img className="logo-img" src="/My-logo.svg" />
           </a>
-          <a href="https://github.com/Enzoriel" target="_blank">
-            <img src="/githubv2.svg" className="networks" aria-label="Github" title="Ve mis repositorios en Github" />
-          </a>
-        </div>
+        </section>
       </footer>
-      <section className="logo">
-        <a>
-          <img className="logo-img" src="/My-logo.svg" />
-        </a>
-      </section>
     </div>
   );
 }
