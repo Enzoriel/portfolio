@@ -96,13 +96,6 @@ const Tecnologies = () => {
 function App() {
   return (
     <div className="html">
-      <nav className="nav">
-        <section className="logo">
-          <a>
-            <img className="logo-img" src="/My-logo.svg" />
-          </a>
-        </section>
-      </nav>
       <section className="info class-box" id="info">
         <div className="box-img">
           <img className="img" src="/logo-img.png" />
@@ -139,6 +132,11 @@ function App() {
           </a>
         </div>
       </footer>
+      <section className="logo">
+        <a>
+          <img className="logo-img" src="/My-logo.svg" />
+        </a>
+      </section>
     </div>
   );
 }
