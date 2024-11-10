@@ -97,28 +97,13 @@ function App() {
   return (
     <div className="html">
       <nav className="nav">
-        <section className="logo class-box">
+        <section className="logo">
           <a>
             <img className="logo-img" src="/My-logo.svg" />
           </a>
         </section>
-
-        <ul className="nav-list class-box">
-          <li className="nav-item">
-            <a>Inicio</a>
-          </li>
-          <li className="nav-item">
-            <a>Proyectos</a>
-          </li>
-          <li className="nav-item">
-            <a>Tecnologías</a>
-          </li>
-          <li className="nav-item">
-            <a>Contacto</a>
-          </li>
-        </ul>
       </nav>
-      <section className="info class-box">
+      <section className="info class-box" id="info">
         <div className="box-img">
           <img className="img" src="/logo-img.png" />
         </div>
@@ -132,18 +117,28 @@ function App() {
           </p>
         </div>
       </section>
-      <section className="proyect class-box">
+      <section className="proyect class-box" id="proyect">
         <h2 className="title">Proyectos</h2>
         <div>
           <Proyects />
         </div>
       </section>
-      <section className="tecnologies class-box">
+      <section className="tecnologies class-box" id="tecnologies">
         <h2 className="title tecno-text">Tecnologías</h2>
         <div className="tecno-container" id="tecno">
           <Tecnologies />
         </div>
       </section>
+      <footer className="footer">
+        <div className="networks-links">
+          <a href="https://www.linkedin.com/in/enzorieldev/" target="_blank">
+            <img src="/linkedin.svg" className="networks" aria-label="Linkedin" title="Contactame por Linkedin" />
+          </a>
+          <a href="https://github.com/Enzoriel" target="_blank">
+            <img src="/githubv2.svg" className="networks" aria-label="Github" title="Ve mis repositorios en Github" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
