@@ -41,7 +41,7 @@ a {
 
 .fade-in {
   opacity: 0;
-  transform: translateY(50px) scale(1.1);
+  transform: translateY(50px) scale(0.9);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
