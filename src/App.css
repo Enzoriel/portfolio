@@ -44,15 +44,15 @@ a {
   justify-content: center;
   align-items: center;
   background-color: var(--blur-color);
-  padding: 40px 10px;
+  padding: 70px 10px;
   position: relative;
 }
 
 .networks-links {
   position: absolute;
-  width: 100px;
-  bottom: 5%;
-  right: 5%;
+  width: 130px;
+  bottom: 7%;
+  right: 7%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +62,7 @@ a {
 .networks {
   width: 100%;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.555);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
   transition: transform 0.3s ease;
   -webkit-user-drag: none;
@@ -70,7 +70,7 @@ a {
 }
 
 .networks:hover {
-  animation: girarInfinito 1s infinite ease-in-out;
+  animation: girarInfinito 0.5s infinite ease-in-out;
 }
 
 .networks:active {
@@ -84,7 +84,7 @@ a {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(5%);
+    transform: translateY(3%);
   }
   100% {
     transform: translateY(0);
@@ -93,7 +93,7 @@ a {
 
 .description {
   font-family: "Wellfleet", serif;
-  padding: 20px;
+  padding: 10px;
   text-align: start;
 }
 
@@ -173,6 +173,7 @@ a {
   color: #372a25;
   transition: all 0.5s ease;
   flex: 0 0 300px;
+  cursor: default;
 }
 
 .proyect-list:has(.proyect-item:hover) .proyect-item:not(:hover) {
@@ -239,6 +240,10 @@ a {
 .links:hover {
   fill: #332d1c7e;
   transform: scale(1.1);
+}
+
+.links:active {
+  transform: scale(0.95);
 }
 
 /* TECNOLOGIES */

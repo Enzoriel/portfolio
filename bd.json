@@ -2,7 +2,7 @@
   {
     "name": "Valorant API",
     "img": "/valorant.png",
-    "description": "Esta es una aplicación SPA desarrollada en React utilizando Vite. La app emplea React Router para la navegación sin recargas y Context API para manejar el estado global. Mediante llamadas a una API de Valorant, muestra información relevante de cada personaje, lo que permite una experiencia dinámica y en tiempo real.",
+    "description": "Aplicación SPA desarrollada en React utilizando Vite. La app emplea React Router para la navegación sin recargas y Context API para manejar el estado global. Mediante llamadas a una API de Valorant, muestra información relevante de cada personaje, lo que permite una experiencia dinámica y en tiempo real.",
     "github": "https://github.com/Enzoriel/valorant-api",
     "deploy": "https://valorant-api-pearl.vercel.app/"
   },
