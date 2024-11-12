@@ -1,13 +1,14 @@
 import "./App.css";
 import proyectos from "/bd.json";
 
+// Listar los proyectos
 const Proyects = () => {
   const bd = proyectos;
 
   return (
     <div className="proyect-list">
       {bd.map((element) => (
-        <div className="proyect-item" key={element.name}>
+        <div className="proyect-item fade-in" key={element.name}>
           <h3>{element.name}</h3>
           <img className="proyect-preview" src={element.img} />
           <p>{element.description}</p>
@@ -60,6 +61,7 @@ const Proyects = () => {
   );
 };
 
+// Listar las tecnologías
 const Tecnologies = () => {
   const tecnologiesImg = [
     "javascript",
@@ -73,9 +75,9 @@ const Tecnologies = () => {
   ];
 
   return (
-    <div className="tecno-container">
+    <div className="tecno-container fade-in">
       {tecnologiesImg.map((element) => (
-        <div className="tecno-list" key={element}>
+        <div className="tecno-list fade-in" key={element}>
           <img
             className="tecno-img"
             src={`/tecnologies/${element}.svg`}
@@ -91,6 +93,7 @@ const Tecnologies = () => {
   );
 };
 
+// Efecto de animación del slime
 const handleClick = (e) => {
   e.preventDefault();
   const element = e.currentTarget;
@@ -101,6 +104,26 @@ const handleClick = (e) => {
     }
   }, 1000);
 };
+
+// Efecto de fade-in en el viewport
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+
+  return rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0;
+}
+
+function showElements() {
+  const elementsForAni = document.querySelectorAll(".fade-in");
+  elementsForAni.forEach((element) => {
+    if (isElementInViewport(element)) {
+      element.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", showElements);
+
+showElements();
 
 function App() {
   return (
@@ -127,13 +150,13 @@ function App() {
           </p>
         </div>
       </section>
-      <section className="proyect class-box" id="proyect">
-        <h2 className="title">Proyectos</h2>
+      <section className="proyect class-box fade-in" id="proyect">
+        <h2 className="title fade-in">Proyectos</h2>
         <div>
           <Proyects />
         </div>
       </section>
-      <section className="tecnologies class-box" id="tecnologies">
+      <section className="tecnologies class-box fade-in" id="tecnologies">
         <h2 className="title tecno-text">Tecnologías</h2>
         <div className="tecno-container" id="tecno">
           <Tecnologies />

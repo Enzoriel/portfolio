@@ -37,6 +37,19 @@ a {
     drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
+/* FADE-IN VIEWPORT */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px) scale(1.1);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 /* INFORMATION */
 .info {
   display: flex;
@@ -50,7 +63,7 @@ a {
 
 .networks-links {
   position: absolute;
-  width: 130px;
+  width: 12%;
   bottom: 7%;
   right: 7%;
   display: flex;
@@ -94,6 +107,7 @@ a {
 .description {
   font-family: "Wellfleet", serif;
   padding: 10px;
+  margin-right: 10px;
   text-align: start;
 }
 
@@ -361,8 +375,8 @@ a {
 .logo::before {
   content: "";
   position: absolute;
-  width: 35%;
-  height: 7px;
+  width: 30%;
+  height: 10%;
   top: 50%;
   border-radius: 5px;
   background-color: #ccbf92;
@@ -377,7 +391,97 @@ a {
 }
 
 .logo-img {
-  height: 70px;
+  width: 30%;
   -webkit-user-drag: none;
   user-select: none;
+}
+
+/* MEDIA QUARIES */
+
+@media (max-width: 768px) {
+  /* INFORMATION */
+  .info {
+    flex-direction: column;
+    padding: 10px 10px 80px 10px;
+  }
+
+  .box-img {
+    padding: 0;
+  }
+
+  .img {
+    width: 100%;
+    margin-left: 20px;
+    transform: rotateY(180deg);
+  }
+
+  .networks-links {
+    width: 20%;
+    bottom: -3%;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .description :first-child {
+    font-size: 6vw;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    margin-bottom: 5%;
+    margin-right: 0;
+  }
+
+  .description p {
+    text-align: center;
+    font-size: 2.5vw;
+  }
+
+  /* PROYECTS */
+  .title {
+    font-size: 12vw;
+  }
+
+  /* TECNOLOGIES */
+  .tecnologies {
+    padding: 30px;
+  }
+
+  .tecno-container {
+    gap: 50px;
+  }
+
+  .tecno-text {
+    text-align: center;
+  }
+
+  .tecno-list {
+    width: 50px;
+    height: 50px;
+    overflow: visible;
+  }
+
+  .tecno-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tecno-description {
+    bottom: -35%;
+    width: 150px;
+  }
+
+  .tecno-description p {
+    font-size: 15px;
+    bottom: -30%;
+  }
+
+  .tecno-list:hover .tecno-description {
+    bottom: -35%;
+  }
+
+  .tecno-list:hover .tecno-img {
+    transform: none;
+  }
 }
